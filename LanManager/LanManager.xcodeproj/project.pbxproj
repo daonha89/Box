@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		AD373CBD18FB97B6001BDB5E /* MCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD373CBC18FB97B6001BDB5E /* MCManager.m */; };
 		AD373CC018FB9A59001BDB5E /* UserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = AD373CBF18FB9A59001BDB5E /* UserDefault.m */; };
+		AD373CCD18FB9DC9001BDB5E /* NSBubbleData.m in Sources */ = {isa = PBXBuildFile; fileRef = AD373CC318FB9DC9001BDB5E /* NSBubbleData.m */; };
+		AD373CCE18FB9DC9001BDB5E /* UIBubbleHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD373CC518FB9DC9001BDB5E /* UIBubbleHeaderTableViewCell.m */; };
+		AD373CCF18FB9DC9001BDB5E /* UIBubbleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD373CC718FB9DC9001BDB5E /* UIBubbleTableView.m */; };
+		AD373CD018FB9DC9001BDB5E /* UIBubbleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD373CC918FB9DC9001BDB5E /* UIBubbleTableViewCell.m */; };
+		AD373CD118FB9DC9001BDB5E /* UIBubbleTypingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD373CCC18FB9DC9001BDB5E /* UIBubbleTypingTableViewCell.m */; };
+		AD373CD418FB9F04001BDB5E /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD373CD318FB9F04001BDB5E /* ChatViewController.m */; };
 		ADB0414118F7CD1C001E7D28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB0414018F7CD1C001E7D28 /* Foundation.framework */; };
 		ADB0414318F7CD1C001E7D28 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB0414218F7CD1C001E7D28 /* CoreGraphics.framework */; };
 		ADB0414518F7CD1C001E7D28 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB0414418F7CD1C001E7D28 /* UIKit.framework */; };
@@ -41,6 +47,19 @@
 		AD373CBC18FB97B6001BDB5E /* MCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCManager.m; sourceTree = "<group>"; };
 		AD373CBE18FB9A59001BDB5E /* UserDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefault.h; sourceTree = "<group>"; };
 		AD373CBF18FB9A59001BDB5E /* UserDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefault.m; sourceTree = "<group>"; };
+		AD373CC218FB9DC9001BDB5E /* NSBubbleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBubbleData.h; sourceTree = "<group>"; };
+		AD373CC318FB9DC9001BDB5E /* NSBubbleData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBubbleData.m; sourceTree = "<group>"; };
+		AD373CC418FB9DC9001BDB5E /* UIBubbleHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBubbleHeaderTableViewCell.h; sourceTree = "<group>"; };
+		AD373CC518FB9DC9001BDB5E /* UIBubbleHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBubbleHeaderTableViewCell.m; sourceTree = "<group>"; };
+		AD373CC618FB9DC9001BDB5E /* UIBubbleTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBubbleTableView.h; sourceTree = "<group>"; };
+		AD373CC718FB9DC9001BDB5E /* UIBubbleTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBubbleTableView.m; sourceTree = "<group>"; };
+		AD373CC818FB9DC9001BDB5E /* UIBubbleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBubbleTableViewCell.h; sourceTree = "<group>"; };
+		AD373CC918FB9DC9001BDB5E /* UIBubbleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBubbleTableViewCell.m; sourceTree = "<group>"; };
+		AD373CCA18FB9DC9001BDB5E /* UIBubbleTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBubbleTableViewDataSource.h; sourceTree = "<group>"; };
+		AD373CCB18FB9DC9001BDB5E /* UIBubbleTypingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBubbleTypingTableViewCell.h; sourceTree = "<group>"; };
+		AD373CCC18FB9DC9001BDB5E /* UIBubbleTypingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBubbleTypingTableViewCell.m; sourceTree = "<group>"; };
+		AD373CD218FB9F04001BDB5E /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		AD373CD318FB9F04001BDB5E /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		ADB0413D18F7CD1C001E7D28 /* LanManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LanManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB0414018F7CD1C001E7D28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ADB0414218F7CD1C001E7D28 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -87,9 +106,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD373CC118FB9DC9001BDB5E /* src */ = {
+			isa = PBXGroup;
+			children = (
+				AD373CC218FB9DC9001BDB5E /* NSBubbleData.h */,
+				AD373CC318FB9DC9001BDB5E /* NSBubbleData.m */,
+				AD373CC418FB9DC9001BDB5E /* UIBubbleHeaderTableViewCell.h */,
+				AD373CC518FB9DC9001BDB5E /* UIBubbleHeaderTableViewCell.m */,
+				AD373CC618FB9DC9001BDB5E /* UIBubbleTableView.h */,
+				AD373CC718FB9DC9001BDB5E /* UIBubbleTableView.m */,
+				AD373CC818FB9DC9001BDB5E /* UIBubbleTableViewCell.h */,
+				AD373CC918FB9DC9001BDB5E /* UIBubbleTableViewCell.m */,
+				AD373CCA18FB9DC9001BDB5E /* UIBubbleTableViewDataSource.h */,
+				AD373CCB18FB9DC9001BDB5E /* UIBubbleTypingTableViewCell.h */,
+				AD373CCC18FB9DC9001BDB5E /* UIBubbleTypingTableViewCell.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		ADB0413418F7CD1C001E7D28 = {
 			isa = PBXGroup;
 			children = (
+				AD373CC118FB9DC9001BDB5E /* src */,
 				ADB0414618F7CD1C001E7D28 /* LanManager */,
 				ADB0416818F7CD1C001E7D28 /* LanManagerTests */,
 				ADB0413F18F7CD1C001E7D28 /* Frameworks */,
@@ -132,6 +170,8 @@
 				ADB0414718F7CD1C001E7D28 /* Supporting Files */,
 				AD373CBE18FB9A59001BDB5E /* UserDefault.h */,
 				AD373CBF18FB9A59001BDB5E /* UserDefault.m */,
+				AD373CD218FB9F04001BDB5E /* ChatViewController.h */,
+				AD373CD318FB9F04001BDB5E /* ChatViewController.m */,
 			);
 			path = LanManager;
 			sourceTree = "<group>";
@@ -265,9 +305,15 @@
 			files = (
 				ADB0415A18F7CD1C001E7D28 /* ViewController.m in Sources */,
 				AD373CC018FB9A59001BDB5E /* UserDefault.m in Sources */,
+				AD373CD118FB9DC9001BDB5E /* UIBubbleTypingTableViewCell.m in Sources */,
+				AD373CCD18FB9DC9001BDB5E /* NSBubbleData.m in Sources */,
+				AD373CD418FB9F04001BDB5E /* ChatViewController.m in Sources */,
+				AD373CCF18FB9DC9001BDB5E /* UIBubbleTableView.m in Sources */,
+				AD373CD018FB9DC9001BDB5E /* UIBubbleTableViewCell.m in Sources */,
 				AD373CBD18FB97B6001BDB5E /* MCManager.m in Sources */,
 				ADB0415118F7CD1C001E7D28 /* AppDelegate.m in Sources */,
 				ADB0414D18F7CD1C001E7D28 /* main.m in Sources */,
+				AD373CCE18FB9DC9001BDB5E /* UIBubbleHeaderTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

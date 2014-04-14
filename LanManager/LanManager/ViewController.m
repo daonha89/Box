@@ -19,6 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"List Device";
     [self visibility];
     UserDefault  *user = [UserDefault new];
     NSMutableArray * array = [user resultObject:@"arrayDevice"];
@@ -68,6 +69,7 @@
         UserDefault  *user = [UserDefault new];
         [user objectWithKey:@"arrayDevice" value:_arrConnectedDevices];
         BOOL peersExist = ([[_appDelegate.mcManager.session connectedPeers] count] == 0);
+        
     }
 
 }
@@ -92,5 +94,7 @@
     cell.textLabel.text = [_arrConnectedDevices objectAtIndex:indexPath.row];
     return cell;
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"chat" sender:Nil];
+}
 @end
