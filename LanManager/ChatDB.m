@@ -11,7 +11,7 @@
 
 #define kUserTableName @"chat"
 static NSString * const SQL_INSERT_OR_REPLACE
-= @"INSERT OR REPLACE INTO chat (key, value) VALUES (?, ?);";
+= @"INSERT OR REPLACE INTO chat (key, value, date) VALUES (?, ?, ?);";
 
 @implementation ChatDB
 - (id) init {
@@ -32,7 +32,7 @@ static NSString * const SQL_INSERT_OR_REPLACE
     
     if (existTable) {
     } else {
-        NSString * sql = @"CREATE TABLE chat (idMail int IDENTITY(1,1) PRIMARY KEY, key TEXT NOT NULL, value TEXT NOT NULL)";
+        NSString * sql = @"CREATE TABLE chat (idMail int IDENTITY(1,1) PRIMARY KEY, key TEXT NOT NULL, value TEXT NOT NULL, date TEXT NOT NULL)";
         BOOL res = [_db executeUpdate:sql];
         if (!res) {
         } else {
@@ -40,7 +40,7 @@ static NSString * const SQL_INSERT_OR_REPLACE
     }
 }
 - (BOOL)insertOrUpdate:(ChatDetail *)dicInfo  {
-   BOOL isSave =  [_db executeUpdate:SQL_INSERT_OR_REPLACE,dicInfo.peerID,dicInfo.content];
+   BOOL isSave =  [_db executeUpdate:SQL_INSERT_OR_REPLACE,dicInfo.peerID,dicInfo.content,dicInfo.date];
     return isSave;
 }
 - (NSMutableArray* )getListchat {
@@ -50,6 +50,7 @@ static NSString * const SQL_INSERT_OR_REPLACE
         ChatDetail *getSMS = [[ChatDetail alloc] init];
         getSMS.peerID = [s stringForColumn:@"key"];
         getSMS.content = [s stringForColumn:@"value"];
+        getSMS.date = [s stringForColumn:@"date"];
         [listSMS addObject:getSMS];
     }
     return listSMS;

@@ -45,19 +45,21 @@
     bubbleTable.snapInterval = 120;
     bubbleTable.showAvatars = YES;
     bubbleTable.typingBubble = NSBubbleTypingTypeNobody;
-
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd/MM/yyyy hh:mm:ss"];
+    
     db = [[ChatDB alloc] init];
     [db createDataBase];
     NSMutableArray * a = [db getListchat];
     for (ChatDetail * chat in a) {
         NSBubbleData *sayBubble;
         if (chat.peerID != self.peerID) {
-            NSLog(@"%@ content",chat.peerID);
-            sayBubble = [NSBubbleData dataWithText:chat.content date:[NSDate dateWithTimeIntervalSinceNow:0] type:BubbleTypeMine];
+            NSLog(@"%@",[formatter dateFromString:chat.date]);
+            NSTimeInterval  inter = [[formatter dateFromString:chat.date] timeIntervalSinceDate:[NSDate date]];
+            sayBubble = [NSBubbleData dataWithText:chat.content date:[NSDate dateWithTimeIntervalSinceNow:inter] type:BubbleTypeMine];
         }
         else {
-           // NSLog(@"%@ content",chat.peerID.description);
-            sayBubble = [NSBubbleData dataWithText:chat.content date:[NSDate dateWithTimeIntervalSinceNow:0] type:BubbleTypeSomeoneElse];
+            sayBubble = [NSBubbleData dataWithText:chat.content date:[formatter dateFromString:chat.date] type:BubbleTypeSomeoneElse];
         }
         [bubbleData addObject:sayBubble];
     }
@@ -151,14 +153,18 @@
     if (error) {
         NSLog(@"%@", [error localizedDescription]);
     }
-    NSBubbleData *sayBubble = [NSBubbleData dataWithText:_textField.text date:[NSDate dateWithTimeIntervalSinceNow:0] type:BubbleTypeMine];
+    NSBubbleData *sayBubble = [NSBubbleData dataWithText:_textField.text date:[NSDate date] type:BubbleTypeMine];
     [bubbleData addObject:sayBubble];
     [bubbleTable scrollBubbleViewToBottomAnimated:YES];
     [bubbleTable reloadData];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd/MM/yyyy hh:mm:ss"];
+
     MCPeerID * myId =  _appDelegate.mcManager.session.myPeerID;
     ChatDetail * dt = [[ChatDetail alloc] init];
     dt.peerID = myId;
     dt.content = _textField.text;
+    dt.date = [formatter stringFromDate:[NSDate date]];
     BOOL  iSave = [db insertOrUpdate:dt];
     if (iSave == NO) {
         NSLog(@"[No]");
@@ -183,11 +189,11 @@
     
     NSData *receivedData = [[notification userInfo] objectForKey:@"data"];
     NSString *receivedText = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
-    NSBubbleData *sayBubble = [NSBubbleData dataWithText:[NSString stringWithFormat:@"%@ wrote:\n%@\n\n", peerDisplayName, receivedText] date:[NSDate dateWithTimeIntervalSinceNow:0] type:BubbleTypeMine];
+    NSBubbleData *sayBubble = [NSBubbleData dataWithText:receivedText date:[NSDate date] type:BubbleTypeMine];
     [bubbleData addObject:sayBubble];
     [bubbleTable scrollBubbleViewToBottomAnimated:YES];
     [bubbleTable reloadData];
-    MCPeerID * myId =  _appDelegate.mcManager.session.myPeerID;
+    MCPeerID * myId = peerID;
     ChatDetail * dt = [[ChatDetail alloc] init];
     dt.peerID = myId;
     dt.content = receivedText;
