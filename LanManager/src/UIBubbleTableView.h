@@ -28,5 +28,4 @@ typedef enum _NSBubbleTypingType
 @property (nonatomic) BOOL showAvatars;
 
 - (void) scrollBubbleViewToBottomAnimated:(BOOL)animated;
-
 @end

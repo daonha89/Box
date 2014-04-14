@@ -46,7 +46,7 @@
     bubbleTable.showAvatars = YES;
     bubbleTable.typingBubble = NSBubbleTypingTypeNobody;
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"dd/MM/yyyy hh:mm:ss"];
+    [formatter setDateFormat:@"dd/MM/yyyy HH:mm:ss"];
     
     db = [[ChatDB alloc] init];
     [db createDataBase];
@@ -55,14 +55,15 @@
         NSBubbleData *sayBubble;
         if (chat.peerID != self.peerID) {
             NSLog(@"%@",[formatter dateFromString:chat.date]);
-            NSTimeInterval  inter = [[formatter dateFromString:chat.date] timeIntervalSinceDate:[NSDate date]];
             sayBubble = [NSBubbleData dataWithText:chat.content date:[formatter dateFromString:chat.date] type:BubbleTypeMine];
         }
         else {
             sayBubble = [NSBubbleData dataWithText:chat.content date:[formatter dateFromString:chat.date] type:BubbleTypeSomeoneElse];
         }
         [bubbleData addObject:sayBubble];
+        
     }
+    [bubbleTable scrollBubbleViewToBottomAnimated:YES];
     [bubbleTable reloadData];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(didReceiveDataWithNotification:)
@@ -158,7 +159,7 @@
     [bubbleTable scrollBubbleViewToBottomAnimated:YES];
     [bubbleTable reloadData];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"dd/MM/yyyy hh:mm:ss"];
+    [formatter setDateFormat:@"dd/MM/yyyy HH:mm:ss"];
 
     MCPeerID * myId =  _appDelegate.mcManager.session.myPeerID;
     ChatDetail * dt = [[ChatDetail alloc] init];
