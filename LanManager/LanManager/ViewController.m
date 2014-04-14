@@ -24,6 +24,7 @@
 {
     [super viewDidLoad];
     self.title = @"List Device";
+    
     [self visibility];
     UserDefault  *user = [UserDefault new];
     NSMutableArray * array = [user resultObject:@"arrayDevice"];
@@ -51,7 +52,15 @@
                                                object:nil];
 
 }
+- ( IBAction)addDevice:(id)sender {
+    [self browse];
+}
+- (void)browse {
+    [[_appDelegate mcManager] setupMCBrowser];
+    [[[_appDelegate mcManager] browser] setDelegate:self];
+    [self presentViewController:[[_appDelegate mcManager] browser] animated:YES completion:nil];
 
+}
 #pragma Notification Peer
 -(void)peerDidChangeStateWithNotification:(NSNotification *)notification {
    p_peerId = [[notification userInfo] objectForKey:@"peerID"];
@@ -73,7 +82,6 @@
         UserDefault  *user = [UserDefault new];
         [user objectWithKey:@"arrayDevice" value:_arrConnectedDevices];
         BOOL peersExist = ([[_appDelegate.mcManager.session connectedPeers] count] == 0);
-        
     }
 
 }
@@ -85,7 +93,7 @@
 
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;//[_arrConnectedDevices count];
+    return [_arrConnectedDevices count];
 }
 
 
@@ -95,7 +103,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CellIdentifier"];
     }
-    cell.textLabel.text = @"device";//[_arrConnectedDevices objectAtIndex:indexPath.row];
+    cell.textLabel.text = [_arrConnectedDevices objectAtIndex:indexPath.row];
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -108,4 +116,15 @@
         
     }
 }
+#pragma mark - MCBrowserViewControllerDelegate method implementation
+
+-(void)browserViewControllerDidFinish:(MCBrowserViewController *)browserViewController{
+    [_appDelegate.mcManager.browser dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+-(void)browserViewControllerWasCancelled:(MCBrowserViewController *)browserViewController{
+    [_appDelegate.mcManager.browser dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end

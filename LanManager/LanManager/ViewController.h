@@ -10,4 +10,5 @@
 
 @interface ViewController : UIViewController
 @property (nonatomic,strong) IBOutlet UITableView *tbvDevice;
+- ( IBAction)addDevice:(id)sender;
 @end
