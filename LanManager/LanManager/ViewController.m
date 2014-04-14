@@ -9,7 +9,11 @@
 #import "ViewController.h"
 #import "AppDelegate.h"
 #import "UserDefault.h"
+#import "ChatViewController.h"
 @interface ViewController ()
+{
+    MCPeerID *p_peerId;
+}
 @property (nonatomic, strong) AppDelegate *appDelegate;
 @property (nonatomic, strong) NSMutableArray *arrConnectedDevices;
 @end
@@ -50,17 +54,17 @@
 
 #pragma Notification Peer
 -(void)peerDidChangeStateWithNotification:(NSNotification *)notification {
-    MCPeerID *peerID = [[notification userInfo] objectForKey:@"peerID"];
-    NSString *peerDisplayName = peerID.displayName;
+   p_peerId = [[notification userInfo] objectForKey:@"peerID"];
+    NSString *peerDisplayName = p_peerId.displayName;
     MCSessionState state = [[[notification userInfo] objectForKey:@"state"] intValue];
     
     if (state != MCSessionStateConnecting) {
         if (state == MCSessionStateConnected) {
-            [_arrConnectedDevices addObject:peerID];
+            [_arrConnectedDevices addObject:peerDisplayName];
         }
         else if (state == MCSessionStateNotConnected){
             if ([_arrConnectedDevices count] > 0) {
-                int indexOfPeer = [_arrConnectedDevices indexOfObject:peerID];
+                int indexOfPeer = [_arrConnectedDevices indexOfObject:peerDisplayName];
                 [_arrConnectedDevices removeObjectAtIndex:indexOfPeer];
             }
         }
@@ -97,5 +101,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self performSegueWithIdentifier:@"chat" sender:Nil];
 }
-
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([sender isEqualToString:@"chat"]) {
+        ChatViewController *chat = (ChatViewController *)segue.destinationViewController;
+        chat.peerID = p_peerId;
+        
+    }
+}
 @end

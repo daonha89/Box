@@ -15,7 +15,7 @@
 #import "ChatDB.h"
 @interface ChatViewController ()
 {
-     IBOutlet UIView *textInputView;
+    IBOutlet UIView *textInputView;
     IBOutlet UIBubbleTableView *bubbleTable;
     IBOutlet UITextField *_textField;
      NSMutableArray *bubbleData;
@@ -51,14 +51,12 @@
     NSMutableArray * a = [db getListchat];
     for (ChatDetail * chat in a) {
         NSBubbleData *sayBubble;
-//        NSString * str1 = chat.peerID.displayName;
-//        NSString * str2 = _appDelegate.mcManager.session.myPeerID.displayName;
-        NSLog(@"%@ content",chat.peerID.displayName);
-        if (chat.peerID.displayName == _appDelegate.mcManager.session.myPeerID.displayName) {
+        if (chat.peerID != self.peerID) {
             NSLog(@"%@ content",chat.peerID);
             sayBubble = [NSBubbleData dataWithText:chat.content date:[NSDate dateWithTimeIntervalSinceNow:0] type:BubbleTypeMine];
         }
         else {
+           // NSLog(@"%@ content",chat.peerID.description);
             sayBubble = [NSBubbleData dataWithText:chat.content date:[NSDate dateWithTimeIntervalSinceNow:0] type:BubbleTypeSomeoneElse];
         }
         [bubbleData addObject:sayBubble];
@@ -189,6 +187,17 @@
     [bubbleData addObject:sayBubble];
     [bubbleTable scrollBubbleViewToBottomAnimated:YES];
     [bubbleTable reloadData];
-    
+    MCPeerID * myId =  _appDelegate.mcManager.session.myPeerID;
+    ChatDetail * dt = [[ChatDetail alloc] init];
+    dt.peerID = myId;
+    dt.content = receivedText;
+    BOOL  iSave = [db insertOrUpdate:dt];
+    if (iSave == NO) {
+        NSLog(@"[No]");
+    }
+    else {
+        NSLog(@"[yes]");
+    }
+
 }
 @end
