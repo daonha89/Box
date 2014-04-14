@@ -29,6 +29,15 @@
 		AD373CF018FBBFE7001BDB5E /* myTyping@2x.psd in Resources */ = {isa = PBXBuildFile; fileRef = AD373CE218FBBFE7001BDB5E /* myTyping@2x.psd */; };
 		AD373CF118FBBFE7001BDB5E /* someoneBubble@2x.psd in Resources */ = {isa = PBXBuildFile; fileRef = AD373CE318FBBFE7001BDB5E /* someoneBubble@2x.psd */; };
 		AD373CF218FBBFE7001BDB5E /* someoneTyping@2x.psd in Resources */ = {isa = PBXBuildFile; fileRef = AD373CE418FBBFE7001BDB5E /* someoneTyping@2x.psd */; };
+		AD373CFF18FBC7A3001BDB5E /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = AD373CF618FBC7A3001BDB5E /* FMDatabase.m */; };
+		AD373D0018FBC7A3001BDB5E /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AD373CF818FBC7A3001BDB5E /* FMDatabaseAdditions.m */; };
+		AD373D0118FBC7A3001BDB5E /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = AD373CFA18FBC7A3001BDB5E /* FMDatabasePool.m */; };
+		AD373D0218FBC7A3001BDB5E /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = AD373CFC18FBC7A3001BDB5E /* FMDatabaseQueue.m */; };
+		AD373D0318FBC7A3001BDB5E /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = AD373CFE18FBC7A3001BDB5E /* FMResultSet.m */; };
+		AD373D0618FBC83C001BDB5E /* Daos.m in Sources */ = {isa = PBXBuildFile; fileRef = AD373D0518FBC83C001BDB5E /* Daos.m */; };
+		AD373D0818FBCC1D001BDB5E /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AD373D0718FBCC1D001BDB5E /* libsqlite3.0.dylib */; };
+		AD373D0B18FBCD33001BDB5E /* ChatDB.m in Sources */ = {isa = PBXBuildFile; fileRef = AD373D0A18FBCD33001BDB5E /* ChatDB.m */; };
+		AD373D0E18FBD3D5001BDB5E /* ChatDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = AD373D0D18FBD3D5001BDB5E /* ChatDetail.m */; };
 		ADB0414118F7CD1C001E7D28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB0414018F7CD1C001E7D28 /* Foundation.framework */; };
 		ADB0414318F7CD1C001E7D28 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB0414218F7CD1C001E7D28 /* CoreGraphics.framework */; };
 		ADB0414518F7CD1C001E7D28 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB0414418F7CD1C001E7D28 /* UIKit.framework */; };
@@ -88,6 +97,23 @@
 		AD373CE218FBBFE7001BDB5E /* myTyping@2x.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "myTyping@2x.psd"; sourceTree = "<group>"; };
 		AD373CE318FBBFE7001BDB5E /* someoneBubble@2x.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "someoneBubble@2x.psd"; sourceTree = "<group>"; };
 		AD373CE418FBBFE7001BDB5E /* someoneTyping@2x.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "someoneTyping@2x.psd"; sourceTree = "<group>"; };
+		AD373CF518FBC7A3001BDB5E /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		AD373CF618FBC7A3001BDB5E /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		AD373CF718FBC7A3001BDB5E /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		AD373CF818FBC7A3001BDB5E /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		AD373CF918FBC7A3001BDB5E /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		AD373CFA18FBC7A3001BDB5E /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		AD373CFB18FBC7A3001BDB5E /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		AD373CFC18FBC7A3001BDB5E /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		AD373CFD18FBC7A3001BDB5E /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		AD373CFE18FBC7A3001BDB5E /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		AD373D0418FBC83C001BDB5E /* Daos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Daos.h; sourceTree = "<group>"; };
+		AD373D0518FBC83C001BDB5E /* Daos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Daos.m; sourceTree = "<group>"; };
+		AD373D0718FBCC1D001BDB5E /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		AD373D0918FBCD33001BDB5E /* ChatDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDB.h; sourceTree = "<group>"; };
+		AD373D0A18FBCD33001BDB5E /* ChatDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDB.m; sourceTree = "<group>"; };
+		AD373D0C18FBD3D5001BDB5E /* ChatDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDetail.h; sourceTree = "<group>"; };
+		AD373D0D18FBD3D5001BDB5E /* ChatDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDetail.m; sourceTree = "<group>"; };
 		ADB0413D18F7CD1C001E7D28 /* LanManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LanManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB0414018F7CD1C001E7D28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ADB0414218F7CD1C001E7D28 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -115,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD373D0818FBCC1D001BDB5E /* libsqlite3.0.dylib in Frameworks */,
 				ADB0414318F7CD1C001E7D28 /* CoreGraphics.framework in Frameworks */,
 				ADB0414518F7CD1C001E7D28 /* UIKit.framework in Frameworks */,
 				ADB0414118F7CD1C001E7D28 /* Foundation.framework in Frameworks */,
@@ -180,9 +207,41 @@
 			path = psd;
 			sourceTree = "<group>";
 		};
+		AD373CF318FBC784001BDB5E /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				AD373D0418FBC83C001BDB5E /* Daos.h */,
+				AD373D0518FBC83C001BDB5E /* Daos.m */,
+				AD373D0918FBCD33001BDB5E /* ChatDB.h */,
+				AD373D0A18FBCD33001BDB5E /* ChatDB.m */,
+			);
+			name = DB;
+			sourceTree = "<group>";
+		};
+		AD373CF418FBC7A3001BDB5E /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				AD373CF518FBC7A3001BDB5E /* FMDatabase.h */,
+				AD373CF618FBC7A3001BDB5E /* FMDatabase.m */,
+				AD373CF718FBC7A3001BDB5E /* FMDatabaseAdditions.h */,
+				AD373CF818FBC7A3001BDB5E /* FMDatabaseAdditions.m */,
+				AD373CF918FBC7A3001BDB5E /* FMDatabasePool.h */,
+				AD373CFA18FBC7A3001BDB5E /* FMDatabasePool.m */,
+				AD373CFB18FBC7A3001BDB5E /* FMDatabaseQueue.h */,
+				AD373CFC18FBC7A3001BDB5E /* FMDatabaseQueue.m */,
+				AD373CFD18FBC7A3001BDB5E /* FMResultSet.h */,
+				AD373CFE18FBC7A3001BDB5E /* FMResultSet.m */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
 		ADB0413418F7CD1C001E7D28 = {
 			isa = PBXGroup;
 			children = (
+				AD373D0C18FBD3D5001BDB5E /* ChatDetail.h */,
+				AD373D0D18FBD3D5001BDB5E /* ChatDetail.m */,
+				AD373CF418FBC7A3001BDB5E /* FMDB */,
+				AD373CF318FBC784001BDB5E /* DB */,
 				AD373CD518FBBFE7001BDB5E /* images */,
 				AD373CE018FBBFE7001BDB5E /* psd */,
 				AD373CC118FB9DC9001BDB5E /* src */,
@@ -205,6 +264,7 @@
 		ADB0413F18F7CD1C001E7D28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AD373D0718FBCC1D001BDB5E /* libsqlite3.0.dylib */,
 				ADB0414018F7CD1C001E7D28 /* Foundation.framework */,
 				ADB0414218F7CD1C001E7D28 /* CoreGraphics.framework */,
 				ADB0414418F7CD1C001E7D28 /* UIKit.framework */,
@@ -378,12 +438,20 @@
 				ADB0415A18F7CD1C001E7D28 /* ViewController.m in Sources */,
 				AD373CC018FB9A59001BDB5E /* UserDefault.m in Sources */,
 				AD373CD118FB9DC9001BDB5E /* UIBubbleTypingTableViewCell.m in Sources */,
+				AD373CFF18FBC7A3001BDB5E /* FMDatabase.m in Sources */,
+				AD373D0618FBC83C001BDB5E /* Daos.m in Sources */,
 				AD373CCD18FB9DC9001BDB5E /* NSBubbleData.m in Sources */,
+				AD373D0218FBC7A3001BDB5E /* FMDatabaseQueue.m in Sources */,
+				AD373D0318FBC7A3001BDB5E /* FMResultSet.m in Sources */,
 				AD373CD418FB9F04001BDB5E /* ChatViewController.m in Sources */,
 				AD373CCF18FB9DC9001BDB5E /* UIBubbleTableView.m in Sources */,
 				AD373CD018FB9DC9001BDB5E /* UIBubbleTableViewCell.m in Sources */,
+				AD373D0018FBC7A3001BDB5E /* FMDatabaseAdditions.m in Sources */,
 				AD373CBD18FB97B6001BDB5E /* MCManager.m in Sources */,
+				AD373D0B18FBCD33001BDB5E /* ChatDB.m in Sources */,
 				ADB0415118F7CD1C001E7D28 /* AppDelegate.m in Sources */,
+				AD373D0118FBC7A3001BDB5E /* FMDatabasePool.m in Sources */,
+				AD373D0E18FBD3D5001BDB5E /* ChatDetail.m in Sources */,
 				ADB0414D18F7CD1C001E7D28 /* main.m in Sources */,
 				AD373CCE18FB9DC9001BDB5E /* UIBubbleHeaderTableViewCell.m in Sources */,
 			);
@@ -520,6 +588,7 @@
 		ADB0417318F7CD1C001E7D28 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -533,6 +602,7 @@
 		ADB0417418F7CD1C001E7D28 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
