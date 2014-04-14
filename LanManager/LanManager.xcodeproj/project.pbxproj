@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD373CBD18FB97B6001BDB5E /* MCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD373CBC18FB97B6001BDB5E /* MCManager.m */; };
+		AD373CC018FB9A59001BDB5E /* UserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = AD373CBF18FB9A59001BDB5E /* UserDefault.m */; };
 		ADB0414118F7CD1C001E7D28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB0414018F7CD1C001E7D28 /* Foundation.framework */; };
 		ADB0414318F7CD1C001E7D28 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB0414218F7CD1C001E7D28 /* CoreGraphics.framework */; };
 		ADB0414518F7CD1C001E7D28 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB0414418F7CD1C001E7D28 /* UIKit.framework */; };
@@ -35,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD373CBB18FB97B6001BDB5E /* MCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCManager.h; sourceTree = "<group>"; };
+		AD373CBC18FB97B6001BDB5E /* MCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCManager.m; sourceTree = "<group>"; };
+		AD373CBE18FB9A59001BDB5E /* UserDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefault.h; sourceTree = "<group>"; };
+		AD373CBF18FB9A59001BDB5E /* UserDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefault.m; sourceTree = "<group>"; };
 		ADB0413D18F7CD1C001E7D28 /* LanManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LanManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB0414018F7CD1C001E7D28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ADB0414218F7CD1C001E7D28 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -114,6 +120,8 @@
 		ADB0414618F7CD1C001E7D28 /* LanManager */ = {
 			isa = PBXGroup;
 			children = (
+				AD373CBB18FB97B6001BDB5E /* MCManager.h */,
+				AD373CBC18FB97B6001BDB5E /* MCManager.m */,
 				ADB0414F18F7CD1C001E7D28 /* AppDelegate.h */,
 				ADB0415018F7CD1C001E7D28 /* AppDelegate.m */,
 				ADB0415218F7CD1C001E7D28 /* Main_iPhone.storyboard */,
@@ -122,6 +130,8 @@
 				ADB0415918F7CD1C001E7D28 /* ViewController.m */,
 				ADB0415B18F7CD1C001E7D28 /* Images.xcassets */,
 				ADB0414718F7CD1C001E7D28 /* Supporting Files */,
+				AD373CBE18FB9A59001BDB5E /* UserDefault.h */,
+				AD373CBF18FB9A59001BDB5E /* UserDefault.m */,
 			);
 			path = LanManager;
 			sourceTree = "<group>";
@@ -254,6 +264,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADB0415A18F7CD1C001E7D28 /* ViewController.m in Sources */,
+				AD373CC018FB9A59001BDB5E /* UserDefault.m in Sources */,
+				AD373CBD18FB97B6001BDB5E /* MCManager.m in Sources */,
 				ADB0415118F7CD1C001E7D28 /* AppDelegate.m in Sources */,
 				ADB0414D18F7CD1C001E7D28 /* main.m in Sources */,
 			);
@@ -474,6 +486,7 @@
 				ADB0417418F7CD1C001E7D28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ADB0417518F7CD1C001E7D28 /* Build configuration list for PBXNativeTarget "LanManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +495,7 @@
 				ADB0417718F7CD1C001E7D28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
