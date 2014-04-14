@@ -234,7 +234,7 @@
 
 - (void) scrollBubbleViewToBottomAnimated:(BOOL)animated
 {
-    NSInteger lastSectionIdx = [self numberOfSections] - 1;
+    NSInteger lastSectionIdx = [self.bubbleSection count] -1;//[self numberOfSections] - 1;
     
     if (lastSectionIdx >= 0)
     {

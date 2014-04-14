@@ -42,7 +42,7 @@
     _textField.delegate = self;
     bubbleData = [NSMutableArray new];
     bubbleTable.bubbleDataSource = self;
-    bubbleTable.snapInterval = 120;
+    bubbleTable.snapInterval = 10;
     bubbleTable.showAvatars = YES;
     bubbleTable.typingBubble = NSBubbleTypingTypeNobody;
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -63,8 +63,9 @@
         [bubbleData addObject:sayBubble];
         
     }
-    [bubbleTable scrollBubbleViewToBottomAnimated:YES];
     [bubbleTable reloadData];
+    [bubbleTable scrollBubbleViewToBottomAnimated:YES];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(didReceiveDataWithNotification:)
                                                  name:@"MCDidReceiveDataNotification"
