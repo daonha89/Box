@@ -7,9 +7,15 @@
 //
 
 #import "ChatViewController.h"
+#import "UIBubbleTableView.h"
+#import "UIBubbleTableViewDataSource.h"
+#import "NSBubbleData.h"
 
 @interface ChatViewController ()
-
+{
+     IBOutlet UIView *textInputView;
+    IBOutlet UIBubbleTableView *bubbleTable;
+}
 @end
 
 @implementation ChatViewController
@@ -26,6 +32,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillBeHidden:) name:UIKeyboardWillHideNotification object:nil];
+
 	// Do any additional setup after loading the view.
 }
 
@@ -34,5 +43,39 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark - Keyboard events
 
+- (void)keyboardWasShown:(NSNotification*)aNotification
+{
+    NSDictionary* info = [aNotification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    [UIView animateWithDuration:0.2f animations:^{
+        
+        CGRect frame = textInputView.frame;
+        frame.origin.y -= kbSize.height;
+        textInputView.frame = frame;
+        
+        frame = bubbleTable.frame;
+        frame.size.height -= kbSize.height;
+        bubbleTable.frame = frame;
+    }];
+}
+
+- (void)keyboardWillBeHidden:(NSNotification*)aNotification
+{
+    NSDictionary* info = [aNotification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    [UIView animateWithDuration:0.2f animations:^{
+        
+        CGRect frame = textInputView.frame;
+        frame.origin.y += kbSize.height;
+        textInputView.frame = frame;
+        
+        frame = bubbleTable.frame;
+        frame.size.height += kbSize.height;
+        bubbleTable.frame = frame;
+    }];
+}
 @end

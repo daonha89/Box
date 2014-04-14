@@ -81,7 +81,7 @@
 
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [_arrConnectedDevices count];
+    return 1;//[_arrConnectedDevices count];
 }
 
 
@@ -91,7 +91,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CellIdentifier"];
     }
-    cell.textLabel.text = [_arrConnectedDevices objectAtIndex:indexPath.row];
+    cell.textLabel.text = @"device";//[_arrConnectedDevices objectAtIndex:indexPath.row];
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
