@@ -56,7 +56,7 @@
         if (chat.peerID != self.peerID) {
             NSLog(@"%@",[formatter dateFromString:chat.date]);
             NSTimeInterval  inter = [[formatter dateFromString:chat.date] timeIntervalSinceDate:[NSDate date]];
-            sayBubble = [NSBubbleData dataWithText:chat.content date:[NSDate dateWithTimeIntervalSinceNow:inter] type:BubbleTypeMine];
+            sayBubble = [NSBubbleData dataWithText:chat.content date:[formatter dateFromString:chat.date] type:BubbleTypeMine];
         }
         else {
             sayBubble = [NSBubbleData dataWithText:chat.content date:[formatter dateFromString:chat.date] type:BubbleTypeSomeoneElse];
