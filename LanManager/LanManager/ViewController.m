@@ -56,11 +56,11 @@
     
     if (state != MCSessionStateConnecting) {
         if (state == MCSessionStateConnected) {
-            [_arrConnectedDevices addObject:peerDisplayName];
+            [_arrConnectedDevices addObject:peerID];
         }
         else if (state == MCSessionStateNotConnected){
             if ([_arrConnectedDevices count] > 0) {
-                int indexOfPeer = [_arrConnectedDevices indexOfObject:peerDisplayName];
+                int indexOfPeer = [_arrConnectedDevices indexOfObject:peerID];
                 [_arrConnectedDevices removeObjectAtIndex:indexOfPeer];
             }
         }
@@ -97,4 +97,5 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self performSegueWithIdentifier:@"chat" sender:Nil];
 }
+
 @end

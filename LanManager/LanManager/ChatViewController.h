@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <MultipeerConnectivity/MultipeerConnectivity.h>
 @interface ChatViewController : UIViewController
-
+@property (nonatomic,strong) MCPeerID *peerID;
 @end

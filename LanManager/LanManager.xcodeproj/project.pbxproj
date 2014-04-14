@@ -15,6 +15,20 @@
 		AD373CD018FB9DC9001BDB5E /* UIBubbleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD373CC918FB9DC9001BDB5E /* UIBubbleTableViewCell.m */; };
 		AD373CD118FB9DC9001BDB5E /* UIBubbleTypingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD373CCC18FB9DC9001BDB5E /* UIBubbleTypingTableViewCell.m */; };
 		AD373CD418FB9F04001BDB5E /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD373CD318FB9F04001BDB5E /* ChatViewController.m */; };
+		AD373CE518FBBFE7001BDB5E /* bubbleMine.png in Resources */ = {isa = PBXBuildFile; fileRef = AD373CD618FBBFE7001BDB5E /* bubbleMine.png */; };
+		AD373CE618FBBFE7001BDB5E /* bubbleMine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD373CD718FBBFE7001BDB5E /* bubbleMine@2x.png */; };
+		AD373CE718FBBFE7001BDB5E /* bubbleSomeone.png in Resources */ = {isa = PBXBuildFile; fileRef = AD373CD818FBBFE7001BDB5E /* bubbleSomeone.png */; };
+		AD373CE818FBBFE7001BDB5E /* bubbleSomeone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD373CD918FBBFE7001BDB5E /* bubbleSomeone@2x.png */; };
+		AD373CE918FBBFE7001BDB5E /* missingAvatar.png in Resources */ = {isa = PBXBuildFile; fileRef = AD373CDA18FBBFE7001BDB5E /* missingAvatar.png */; };
+		AD373CEA18FBBFE7001BDB5E /* missingAvatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD373CDB18FBBFE7001BDB5E /* missingAvatar@2x.png */; };
+		AD373CEB18FBBFE7001BDB5E /* typingMine.png in Resources */ = {isa = PBXBuildFile; fileRef = AD373CDC18FBBFE7001BDB5E /* typingMine.png */; };
+		AD373CEC18FBBFE7001BDB5E /* typingMine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD373CDD18FBBFE7001BDB5E /* typingMine@2x.png */; };
+		AD373CED18FBBFE7001BDB5E /* typingSomeone.png in Resources */ = {isa = PBXBuildFile; fileRef = AD373CDE18FBBFE7001BDB5E /* typingSomeone.png */; };
+		AD373CEE18FBBFE7001BDB5E /* typingSomeone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD373CDF18FBBFE7001BDB5E /* typingSomeone@2x.png */; };
+		AD373CEF18FBBFE7001BDB5E /* myBubble@2x.psd in Resources */ = {isa = PBXBuildFile; fileRef = AD373CE118FBBFE7001BDB5E /* myBubble@2x.psd */; };
+		AD373CF018FBBFE7001BDB5E /* myTyping@2x.psd in Resources */ = {isa = PBXBuildFile; fileRef = AD373CE218FBBFE7001BDB5E /* myTyping@2x.psd */; };
+		AD373CF118FBBFE7001BDB5E /* someoneBubble@2x.psd in Resources */ = {isa = PBXBuildFile; fileRef = AD373CE318FBBFE7001BDB5E /* someoneBubble@2x.psd */; };
+		AD373CF218FBBFE7001BDB5E /* someoneTyping@2x.psd in Resources */ = {isa = PBXBuildFile; fileRef = AD373CE418FBBFE7001BDB5E /* someoneTyping@2x.psd */; };
 		ADB0414118F7CD1C001E7D28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB0414018F7CD1C001E7D28 /* Foundation.framework */; };
 		ADB0414318F7CD1C001E7D28 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB0414218F7CD1C001E7D28 /* CoreGraphics.framework */; };
 		ADB0414518F7CD1C001E7D28 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB0414418F7CD1C001E7D28 /* UIKit.framework */; };
@@ -60,6 +74,20 @@
 		AD373CCC18FB9DC9001BDB5E /* UIBubbleTypingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBubbleTypingTableViewCell.m; sourceTree = "<group>"; };
 		AD373CD218FB9F04001BDB5E /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		AD373CD318FB9F04001BDB5E /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		AD373CD618FBBFE7001BDB5E /* bubbleMine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleMine.png; sourceTree = "<group>"; };
+		AD373CD718FBBFE7001BDB5E /* bubbleMine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubbleMine@2x.png"; sourceTree = "<group>"; };
+		AD373CD818FBBFE7001BDB5E /* bubbleSomeone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleSomeone.png; sourceTree = "<group>"; };
+		AD373CD918FBBFE7001BDB5E /* bubbleSomeone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubbleSomeone@2x.png"; sourceTree = "<group>"; };
+		AD373CDA18FBBFE7001BDB5E /* missingAvatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = missingAvatar.png; sourceTree = "<group>"; };
+		AD373CDB18FBBFE7001BDB5E /* missingAvatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "missingAvatar@2x.png"; sourceTree = "<group>"; };
+		AD373CDC18FBBFE7001BDB5E /* typingMine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = typingMine.png; sourceTree = "<group>"; };
+		AD373CDD18FBBFE7001BDB5E /* typingMine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "typingMine@2x.png"; sourceTree = "<group>"; };
+		AD373CDE18FBBFE7001BDB5E /* typingSomeone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = typingSomeone.png; sourceTree = "<group>"; };
+		AD373CDF18FBBFE7001BDB5E /* typingSomeone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "typingSomeone@2x.png"; sourceTree = "<group>"; };
+		AD373CE118FBBFE7001BDB5E /* myBubble@2x.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "myBubble@2x.psd"; sourceTree = "<group>"; };
+		AD373CE218FBBFE7001BDB5E /* myTyping@2x.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "myTyping@2x.psd"; sourceTree = "<group>"; };
+		AD373CE318FBBFE7001BDB5E /* someoneBubble@2x.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "someoneBubble@2x.psd"; sourceTree = "<group>"; };
+		AD373CE418FBBFE7001BDB5E /* someoneTyping@2x.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "someoneTyping@2x.psd"; sourceTree = "<group>"; };
 		ADB0413D18F7CD1C001E7D28 /* LanManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LanManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB0414018F7CD1C001E7D28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ADB0414218F7CD1C001E7D28 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -124,9 +152,39 @@
 			path = src;
 			sourceTree = "<group>";
 		};
+		AD373CD518FBBFE7001BDB5E /* images */ = {
+			isa = PBXGroup;
+			children = (
+				AD373CD618FBBFE7001BDB5E /* bubbleMine.png */,
+				AD373CD718FBBFE7001BDB5E /* bubbleMine@2x.png */,
+				AD373CD818FBBFE7001BDB5E /* bubbleSomeone.png */,
+				AD373CD918FBBFE7001BDB5E /* bubbleSomeone@2x.png */,
+				AD373CDA18FBBFE7001BDB5E /* missingAvatar.png */,
+				AD373CDB18FBBFE7001BDB5E /* missingAvatar@2x.png */,
+				AD373CDC18FBBFE7001BDB5E /* typingMine.png */,
+				AD373CDD18FBBFE7001BDB5E /* typingMine@2x.png */,
+				AD373CDE18FBBFE7001BDB5E /* typingSomeone.png */,
+				AD373CDF18FBBFE7001BDB5E /* typingSomeone@2x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		AD373CE018FBBFE7001BDB5E /* psd */ = {
+			isa = PBXGroup;
+			children = (
+				AD373CE118FBBFE7001BDB5E /* myBubble@2x.psd */,
+				AD373CE218FBBFE7001BDB5E /* myTyping@2x.psd */,
+				AD373CE318FBBFE7001BDB5E /* someoneBubble@2x.psd */,
+				AD373CE418FBBFE7001BDB5E /* someoneTyping@2x.psd */,
+			);
+			path = psd;
+			sourceTree = "<group>";
+		};
 		ADB0413418F7CD1C001E7D28 = {
 			isa = PBXGroup;
 			children = (
+				AD373CD518FBBFE7001BDB5E /* images */,
+				AD373CE018FBBFE7001BDB5E /* psd */,
 				AD373CC118FB9DC9001BDB5E /* src */,
 				ADB0414618F7CD1C001E7D28 /* LanManager */,
 				ADB0416818F7CD1C001E7D28 /* LanManagerTests */,
@@ -281,10 +339,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD373CEE18FBBFE7001BDB5E /* typingSomeone@2x.png in Resources */,
+				AD373CEF18FBBFE7001BDB5E /* myBubble@2x.psd in Resources */,
 				ADB0415718F7CD1C001E7D28 /* Main_iPad.storyboard in Resources */,
+				AD373CED18FBBFE7001BDB5E /* typingSomeone.png in Resources */,
+				AD373CF218FBBFE7001BDB5E /* someoneTyping@2x.psd in Resources */,
+				AD373CE618FBBFE7001BDB5E /* bubbleMine@2x.png in Resources */,
+				AD373CE518FBBFE7001BDB5E /* bubbleMine.png in Resources */,
+				AD373CE818FBBFE7001BDB5E /* bubbleSomeone@2x.png in Resources */,
 				ADB0415C18F7CD1C001E7D28 /* Images.xcassets in Resources */,
+				AD373CEB18FBBFE7001BDB5E /* typingMine.png in Resources */,
+				AD373CEC18FBBFE7001BDB5E /* typingMine@2x.png in Resources */,
 				ADB0415418F7CD1C001E7D28 /* Main_iPhone.storyboard in Resources */,
+				AD373CE918FBBFE7001BDB5E /* missingAvatar.png in Resources */,
 				ADB0414B18F7CD1C001E7D28 /* InfoPlist.strings in Resources */,
+				AD373CEA18FBBFE7001BDB5E /* missingAvatar@2x.png in Resources */,
+				AD373CF118FBBFE7001BDB5E /* someoneBubble@2x.psd in Resources */,
+				AD373CE718FBBFE7001BDB5E /* bubbleSomeone.png in Resources */,
+				AD373CF018FBBFE7001BDB5E /* myTyping@2x.psd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
