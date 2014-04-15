@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>8A17A839-F672-423C-B806-B30FF0C799E0</string>
+	<string>6A8320A7-2753-4C48-BC2B-985C6C3F7FB6</string>
 	<key>IDESourceControlProjectName</key>
-	<string>LanManager</string>
+	<string>BeamIt</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>3177D452-C54A-4281-9FEB-9BA44C546596</key>
 		<string>https://github.com/daonha89/Box.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>LanManager/LanManager.xcodeproj/project.xcworkspace</string>
+	<string>ArcTouch_BeamIt-132/BeamIt.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>3177D452-C54A-4281-9FEB-9BA44C546596</key>

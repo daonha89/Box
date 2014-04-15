@@ -20,6 +20,7 @@
     IBOutlet UITextField *_textField;
      NSMutableArray *bubbleData;
     ChatDB * db;
+    
 }
 @property (nonatomic, strong) AppDelegate *appDelegate;
 @end
@@ -53,8 +54,8 @@
     NSMutableArray * a = [db getListchat];
     for (ChatDetail * chat in a) {
         NSBubbleData *sayBubble;
+        NSLog(@"peer1 [%@] - peer2 [%@]",chat.peerID,self.peerID);
         if (chat.peerID != self.peerID) {
-            NSLog(@"%@",[formatter dateFromString:chat.date]);
             sayBubble = [NSBubbleData dataWithText:chat.content date:[formatter dateFromString:chat.date] type:BubbleTypeMine];
         }
         else {
@@ -146,7 +147,9 @@
     NSData *dataToSend = [_textField.text dataUsingEncoding:NSUTF8StringEncoding];
     NSArray *allPeers = _appDelegate.mcManager.session.connectedPeers;
     NSError *error;
-    
+    [_appDelegate.mcManager setUpStream];
+    [_appDelegate.mcManager.session startStreamWithName:@"bbb" toPeer:self.peerID error:Nil];
+    [_appDelegate.mcManager.outputStream write:[dataToSend bytes] maxLength:[dataToSend length]];
     [_appDelegate.mcManager.session sendData:dataToSend
                                      toPeers:allPeers
                                     withMode:MCSessionSendDataReliable
@@ -155,13 +158,13 @@
     if (error) {
         NSLog(@"%@", [error localizedDescription]);
     }
+    
     NSBubbleData *sayBubble = [NSBubbleData dataWithText:_textField.text date:[NSDate date] type:BubbleTypeMine];
     [bubbleData addObject:sayBubble];
     [bubbleTable scrollBubbleViewToBottomAnimated:YES];
     [bubbleTable reloadData];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"dd/MM/yyyy HH:mm:ss"];
-
     MCPeerID * myId =  _appDelegate.mcManager.session.myPeerID;
     ChatDetail * dt = [[ChatDetail alloc] init];
     dt.peerID = myId;
@@ -187,18 +190,20 @@
 -(void)didReceiveDataWithNotification:(NSNotification *)notification {
     
     MCPeerID *peerID = [[notification userInfo] objectForKey:@"peerID"];
-    NSString *peerDisplayName = peerID.displayName;
-    
+//    NSString *peerDisplayName = peerID.displayName;
     NSData *receivedData = [[notification userInfo] objectForKey:@"data"];
     NSString *receivedText = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
     NSBubbleData *sayBubble = [NSBubbleData dataWithText:receivedText date:[NSDate date] type:BubbleTypeMine];
     [bubbleData addObject:sayBubble];
     [bubbleTable scrollBubbleViewToBottomAnimated:YES];
     [bubbleTable reloadData];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd/MM/yyyy HH:mm:ss"];
     MCPeerID * myId = peerID;
     ChatDetail * dt = [[ChatDetail alloc] init];
     dt.peerID = myId;
     dt.content = receivedText;
+    dt.date = [formatter stringFromDate:[NSDate date]];
     BOOL  iSave = [db insertOrUpdate:dt];
     if (iSave == NO) {
         NSLog(@"[No]");

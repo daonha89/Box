@@ -1,0 +1,562 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* BeamItAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* BeamItAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		28D7ACF80DDB3853001CB0EB /* BeamItViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* BeamItViewController.m */; };
+		6B84A56B0FD4894B00EF1D35 /* error.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 6B84A5640FD4894B00EF1D35 /* error.aiff */; };
+		6B84A56C0FD4894B00EF1D35 /* received.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 6B84A5650FD4894B00EF1D35 /* received.aiff */; };
+		6B84A56D0FD4894B00EF1D35 /* request.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 6B84A5660FD4894B00EF1D35 /* request.aiff */; };
+		6B84A56E0FD4894B00EF1D35 /* sent.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 6B84A5670FD4894B00EF1D35 /* sent.aiff */; };
+		6B84A56F0FD4894B00EF1D35 /* unavailable.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 6B84A5680FD4894B00EF1D35 /* unavailable.aiff */; };
+		6B84A5850FD48BF000EF1D35 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B84A5840FD48BF000EF1D35 /* AudioToolbox.framework */; };
+		6B84A5EF0FD4AB6700EF1D35 /* available.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 6B84A5EE0FD4AB6700EF1D35 /* available.aiff */; };
+		6B84A6CA0FD6184300EF1D35 /* 57.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B84A6C90FD6184300EF1D35 /* 57.png */; };
+		6BD4DC350FD2DF75004ABBE7 /* SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD4DC340FD2DF75004ABBE7 /* SessionManager.m */; };
+		6BD4DC560FD2E705004ABBE7 /* Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD4DC550FD2E705004ABBE7 /* Device.m */; };
+		6BD4DC640FD2E770004ABBE7 /* ContactDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD4DC630FD2E770004ABBE7 /* ContactDataProvider.m */; };
+		6BD4DCF30FD2F29A004ABBE7 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD4DCF00FD2F29A004ABBE7 /* AddressBook.framework */; };
+		6BD4DCF40FD2F29A004ABBE7 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD4DCF10FD2F29A004ABBE7 /* AddressBookUI.framework */; };
+		6BD4DE040FD301DF004ABBE7 /* DeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD4DE030FD301DF004ABBE7 /* DeviceCell.m */; };
+		6BD4DEB90FD310BA004ABBE7 /* ABRecordSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD4DEB80FD310BA004ABBE7 /* ABRecordSerializer.m */; };
+		6BF3802C0FD758C1006D42D1 /* DevicesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF3802B0FD758C1006D42D1 /* DevicesManager.m */; };
+		7A075D8B177C668E00A576D2 /* SoundLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A075D8A177C668E00A576D2 /* SoundLibrary.m */; };
+		7A075D8F177C746B00A576D2 /* DataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A075D8E177C746B00A576D2 /* DataHandler.m */; };
+		7A2BA1621770D3C000577868 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A2BA1611770D3C000577868 /* Default-568h@2x.png */; };
+		7A94C176178471CA00005211 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A94C175178471CA00005211 /* MultipeerConnectivity.framework */; };
+		7AD53F8E177C75AE0054225B /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD53F8D177C75AE0054225B /* Message.m */; };
+		A29016B217733F4D00BBEE25 /* default_background-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A29016AD17733F4D00BBEE25 /* default_background-568h@2x.png */; };
+		A29016B317733F4D00BBEE25 /* default_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A29016AE17733F4D00BBEE25 /* default_background@2x.png */; };
+		A29016B417733F4D00BBEE25 /* id_card@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A29016AF17733F4D00BBEE25 /* id_card@2x.png */; };
+		A29016B817736B2500BBEE25 /* red_wifi_symbol@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A29016B717736B2500BBEE25 /* red_wifi_symbol@2x.png */; };
+		A29016BA17736B4800BBEE25 /* wifi_symbol@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A29016B917736B4800BBEE25 /* wifi_symbol@2x.png */; };
+		A2907DB41774F77A00E5378F /* transparent_container@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A2907DB31774F77A00E5378F /* transparent_container@2x.png */; };
+		A29DF9CF17724EC8009CE4BC /* 57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A29DF9CD17724EC8009CE4BC /* 57@2x.png */; };
+		BE008A570FD5EF5B00952C48 /* back1.png in Resources */ = {isa = PBXBuildFile; fileRef = BE008A560FD5EF5B00952C48 /* back1.png */; };
+		BE008A5C0FD5F10D00952C48 /* back2.png in Resources */ = {isa = PBXBuildFile; fileRef = BE008A5B0FD5F10D00952C48 /* back2.png */; };
+		BE008B910FD6184000952C48 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BE008B900FD6184000952C48 /* Default.png */; };
+		BE2F39390FD6FBBB00AAB621 /* BeamItViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE2F39330FD6FBBB00AAB621 /* BeamItViewController.xib */; };
+		BE2F393A0FD6FBBB00AAB621 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE2F39350FD6FBBB00AAB621 /* Localizable.strings */; };
+		BE2F393B0FD6FBBB00AAB621 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE2F39370FD6FBBB00AAB621 /* MainWindow.xib */; };
+		BE33077D0FD3AB5B00E5FB64 /* model.xcclassmodel in Resources */ = {isa = PBXBuildFile; fileRef = BE33077C0FD3AB5B00E5FB64 /* model.xcclassmodel */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* BeamItAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = BeamItAppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		1D3623250D0F684500981E51 /* BeamItAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BeamItAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		1D6058910D05DD3D006BFB54 /* BeamIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeamIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28D7ACF60DDB3853001CB0EB /* BeamItViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = BeamItViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		28D7ACF70DDB3853001CB0EB /* BeamItViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BeamItViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		32CA4F630368D1EE00C91783 /* BeamIt_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = BeamIt_Prefix.pch; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		6B84A5640FD4894B00EF1D35 /* error.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = error.aiff; path = sounds/error.aiff; sourceTree = "<group>"; };
+		6B84A5650FD4894B00EF1D35 /* received.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = received.aiff; path = sounds/received.aiff; sourceTree = "<group>"; };
+		6B84A5660FD4894B00EF1D35 /* request.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = request.aiff; path = sounds/request.aiff; sourceTree = "<group>"; };
+		6B84A5670FD4894B00EF1D35 /* sent.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = sent.aiff; path = sounds/sent.aiff; sourceTree = "<group>"; };
+		6B84A5680FD4894B00EF1D35 /* unavailable.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = unavailable.aiff; path = sounds/unavailable.aiff; sourceTree = "<group>"; };
+		6B84A5840FD48BF000EF1D35 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6B84A5EE0FD4AB6700EF1D35 /* available.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = available.aiff; path = sounds/available.aiff; sourceTree = "<group>"; };
+		6B84A6C90FD6184300EF1D35 /* 57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 57.png; sourceTree = "<group>"; };
+		6BD4DC330FD2DF75004ABBE7 /* SessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SessionManager.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		6BD4DC340FD2DF75004ABBE7 /* SessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SessionManager.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		6BD4DC540FD2E705004ABBE7 /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Device.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		6BD4DC550FD2E705004ABBE7 /* Device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Device.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		6BD4DC5C0FD2E755004ABBE7 /* DataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DataProvider.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		6BD4DC620FD2E770004ABBE7 /* ContactDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ContactDataProvider.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		6BD4DC630FD2E770004ABBE7 /* ContactDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ContactDataProvider.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		6BD4DCF00FD2F29A004ABBE7 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		6BD4DCF10FD2F29A004ABBE7 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		6BD4DCF20FD2F29A004ABBE7 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		6BD4DE020FD301DF004ABBE7 /* DeviceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DeviceCell.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		6BD4DE030FD301DF004ABBE7 /* DeviceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DeviceCell.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		6BD4DEB70FD310BA004ABBE7 /* ABRecordSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ABRecordSerializer.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		6BD4DEB80FD310BA004ABBE7 /* ABRecordSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ABRecordSerializer.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		6BF3802A0FD758C1006D42D1 /* DevicesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DevicesManager.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		6BF3802B0FD758C1006D42D1 /* DevicesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DevicesManager.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		7A075D89177C668E00A576D2 /* SoundLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SoundLibrary.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		7A075D8A177C668E00A576D2 /* SoundLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SoundLibrary.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		7A075D8D177C746B00A576D2 /* DataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DataHandler.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		7A075D8E177C746B00A576D2 /* DataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DataHandler.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		7A2BA1611770D3C000577868 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7A2BA1631770D3DA00577868 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		7A6C3F2B1785EE78003E2F5C /* 57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "57@2x.png"; path = "ios7_icon/57@2x.png"; sourceTree = "<group>"; };
+		7A94C175178471CA00005211 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
+		7AD53F8C177C75AE0054225B /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Message.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		7AD53F8D177C75AE0054225B /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Message.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		8D1107310486CEB800E47090 /* BeamIt-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BeamIt-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		A29016AD17733F4D00BBEE25 /* default_background-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default_background-568h@2x.png"; sourceTree = "<group>"; };
+		A29016AE17733F4D00BBEE25 /* default_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default_background@2x.png"; sourceTree = "<group>"; };
+		A29016AF17733F4D00BBEE25 /* id_card@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "id_card@2x.png"; sourceTree = "<group>"; };
+		A29016B717736B2500BBEE25 /* red_wifi_symbol@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_wifi_symbol@2x.png"; sourceTree = "<group>"; };
+		A29016B917736B4800BBEE25 /* wifi_symbol@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wifi_symbol@2x.png"; sourceTree = "<group>"; };
+		A2907DB31774F77A00E5378F /* transparent_container@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transparent_container@2x.png"; sourceTree = "<group>"; };
+		A298CA531778C62500719341 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		A29DF9CD17724EC8009CE4BC /* 57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "57@2x.png"; sourceTree = "<group>"; };
+		BE008A560FD5EF5B00952C48 /* back1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back1.png; sourceTree = "<group>"; };
+		BE008A5B0FD5F10D00952C48 /* back2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back2.png; sourceTree = "<group>"; };
+		BE008B900FD6184000952C48 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		BE2F39340FD6FBBB00AAB621 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BeamItViewController.xib; sourceTree = "<group>"; };
+		BE2F39360FD6FBBB00AAB621 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BE2F39380FD6FBBB00AAB621 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		BE33077C0FD3AB5B00E5FB64 /* model.xcclassmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcclassmodel; path = model.xcclassmodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A94C176178471CA00005211 /* MultipeerConnectivity.framework in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				6BD4DCF30FD2F29A004ABBE7 /* AddressBook.framework in Frameworks */,
+				6BD4DCF40FD2F29A004ABBE7 /* AddressBookUI.framework in Frameworks */,
+				6B84A5850FD48BF000EF1D35 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6BD4DC3D0FD2E61A004ABBE7 /* Main */,
+				6BD4DC390FD2E5D6004ABBE7 /* Connection */,
+				6BD4DC510FD2E6A6004ABBE7 /* Data */,
+				6BD4DC570FD2E713004ABBE7 /* Utilities */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* BeamIt.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				BE3307620FD3AAEB00E5FB64 /* Models */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* BeamIt_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BE2F39370FD6FBBB00AAB621 /* MainWindow.xib */,
+				BE2F39330FD6FBBB00AAB621 /* BeamItViewController.xib */,
+				A29016AD17733F4D00BBEE25 /* default_background-568h@2x.png */,
+				A29016AE17733F4D00BBEE25 /* default_background@2x.png */,
+				A2907DB31774F77A00E5378F /* transparent_container@2x.png */,
+				A29016AF17733F4D00BBEE25 /* id_card@2x.png */,
+				A29016B917736B4800BBEE25 /* wifi_symbol@2x.png */,
+				A29016B717736B2500BBEE25 /* red_wifi_symbol@2x.png */,
+				BE2F39350FD6FBBB00AAB621 /* Localizable.strings */,
+				BE008A5B0FD5F10D00952C48 /* back2.png */,
+				6B84A6C90FD6184300EF1D35 /* 57.png */,
+				A29DF9CD17724EC8009CE4BC /* 57@2x.png */,
+				7A6C3F2B1785EE78003E2F5C /* 57@2x.png */,
+				BE008A560FD5EF5B00952C48 /* back1.png */,
+				6B84A5EE0FD4AB6700EF1D35 /* available.aiff */,
+				6B84A5640FD4894B00EF1D35 /* error.aiff */,
+				6B84A5650FD4894B00EF1D35 /* received.aiff */,
+				6B84A5660FD4894B00EF1D35 /* request.aiff */,
+				6B84A5670FD4894B00EF1D35 /* sent.aiff */,
+				6B84A5680FD4894B00EF1D35 /* unavailable.aiff */,
+				8D1107310486CEB800E47090 /* BeamIt-Info.plist */,
+				7A2BA1611770D3C000577868 /* Default-568h@2x.png */,
+				7A2BA1631770D3DA00577868 /* Default@2x.png */,
+				BE008B900FD6184000952C48 /* Default.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A94C175178471CA00005211 /* MultipeerConnectivity.framework */,
+				A298CA531778C62500719341 /* CFNetwork.framework */,
+				6B84A5840FD48BF000EF1D35 /* AudioToolbox.framework */,
+				6BD4DCF00FD2F29A004ABBE7 /* AddressBook.framework */,
+				6BD4DCF10FD2F29A004ABBE7 /* AddressBookUI.framework */,
+				6BD4DCF20FD2F29A004ABBE7 /* GameKit.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6BD4DC390FD2E5D6004ABBE7 /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				6BD4DC330FD2DF75004ABBE7 /* SessionManager.h */,
+				6BD4DC340FD2DF75004ABBE7 /* SessionManager.m */,
+				6BD4DC540FD2E705004ABBE7 /* Device.h */,
+				6BD4DC550FD2E705004ABBE7 /* Device.m */,
+				6BF3802A0FD758C1006D42D1 /* DevicesManager.h */,
+				6BF3802B0FD758C1006D42D1 /* DevicesManager.m */,
+			);
+			name = Connection;
+			sourceTree = "<group>";
+		};
+		6BD4DC3D0FD2E61A004ABBE7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* BeamItAppDelegate.h */,
+				1D3623250D0F684500981E51 /* BeamItAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* BeamItViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* BeamItViewController.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		6BD4DC510FD2E6A6004ABBE7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				6BD4DC520FD2E6C0004ABBE7 /* Core */,
+				6BD4DC530FD2E6C8004ABBE7 /* Contact */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		6BD4DC520FD2E6C0004ABBE7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				6BD4DC5C0FD2E755004ABBE7 /* DataProvider.h */,
+				7A075D8D177C746B00A576D2 /* DataHandler.h */,
+				7A075D8E177C746B00A576D2 /* DataHandler.m */,
+				7AD53F8C177C75AE0054225B /* Message.h */,
+				7AD53F8D177C75AE0054225B /* Message.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		6BD4DC530FD2E6C8004ABBE7 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				6BD4DC620FD2E770004ABBE7 /* ContactDataProvider.h */,
+				6BD4DC630FD2E770004ABBE7 /* ContactDataProvider.m */,
+			);
+			name = Contact;
+			sourceTree = "<group>";
+		};
+		6BD4DC570FD2E713004ABBE7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6BD4DEB70FD310BA004ABBE7 /* ABRecordSerializer.h */,
+				6BD4DEB80FD310BA004ABBE7 /* ABRecordSerializer.m */,
+				6BD4DE020FD301DF004ABBE7 /* DeviceCell.h */,
+				6BD4DE030FD301DF004ABBE7 /* DeviceCell.m */,
+				7A075D89177C668E00A576D2 /* SoundLibrary.h */,
+				7A075D8A177C668E00A576D2 /* SoundLibrary.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		BE3307620FD3AAEB00E5FB64 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BE33077C0FD3AB5B00E5FB64 /* model.xcclassmodel */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* BeamItFree */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "BeamItFree" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BeamItFree;
+			productName = BeamIt;
+			productReference = 1D6058910D05DD3D006BFB54 /* BeamIt.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "BeamIt" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* BeamItFree */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE33077D0FD3AB5B00E5FB64 /* model.xcclassmodel in Resources */,
+				A29016B417733F4D00BBEE25 /* id_card@2x.png in Resources */,
+				6B84A56B0FD4894B00EF1D35 /* error.aiff in Resources */,
+				6B84A56C0FD4894B00EF1D35 /* received.aiff in Resources */,
+				6B84A56D0FD4894B00EF1D35 /* request.aiff in Resources */,
+				6B84A56E0FD4894B00EF1D35 /* sent.aiff in Resources */,
+				A2907DB41774F77A00E5378F /* transparent_container@2x.png in Resources */,
+				6B84A56F0FD4894B00EF1D35 /* unavailable.aiff in Resources */,
+				6B84A5EF0FD4AB6700EF1D35 /* available.aiff in Resources */,
+				A29016B217733F4D00BBEE25 /* default_background-568h@2x.png in Resources */,
+				BE008A570FD5EF5B00952C48 /* back1.png in Resources */,
+				7A2BA1621770D3C000577868 /* Default-568h@2x.png in Resources */,
+				BE008A5C0FD5F10D00952C48 /* back2.png in Resources */,
+				6B84A6CA0FD6184300EF1D35 /* 57.png in Resources */,
+				A29016B317733F4D00BBEE25 /* default_background@2x.png in Resources */,
+				BE008B910FD6184000952C48 /* Default.png in Resources */,
+				BE2F39390FD6FBBB00AAB621 /* BeamItViewController.xib in Resources */,
+				A29016BA17736B4800BBEE25 /* wifi_symbol@2x.png in Resources */,
+				BE2F393A0FD6FBBB00AAB621 /* Localizable.strings in Resources */,
+				A29016B817736B2500BBEE25 /* red_wifi_symbol@2x.png in Resources */,
+				BE2F393B0FD6FBBB00AAB621 /* MainWindow.xib in Resources */,
+				A29DF9CF17724EC8009CE4BC /* 57@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* BeamItAppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* BeamItViewController.m in Sources */,
+				6BD4DC350FD2DF75004ABBE7 /* SessionManager.m in Sources */,
+				7A075D8B177C668E00A576D2 /* SoundLibrary.m in Sources */,
+				6BD4DC560FD2E705004ABBE7 /* Device.m in Sources */,
+				6BD4DC640FD2E770004ABBE7 /* ContactDataProvider.m in Sources */,
+				6BD4DE040FD301DF004ABBE7 /* DeviceCell.m in Sources */,
+				7A075D8F177C746B00A576D2 /* DataHandler.m in Sources */,
+				6BD4DEB90FD310BA004ABBE7 /* ABRecordSerializer.m in Sources */,
+				7AD53F8E177C75AE0054225B /* Message.m in Sources */,
+				6BF3802C0FD758C1006D42D1 /* DevicesManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BE2F39330FD6FBBB00AAB621 /* BeamItViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE2F39340FD6FBBB00AAB621 /* en */,
+			);
+			name = BeamItViewController.xib;
+			sourceTree = "<group>";
+		};
+		BE2F39350FD6FBBB00AAB621 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE2F39360FD6FBBB00AAB621 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		BE2F39370FD6FBBB00AAB621 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE2F39380FD6FBBB00AAB621 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = BeamIt_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = MY_CONTACT_ONLY;
+				INFOPLIST_FILE = "BeamIt-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = BeamIt;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = BeamIt_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = MY_CONTACT_ONLY;
+				INFOPLIST_FILE = "BeamIt-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = BeamIt;
+			};
+			name = Release;
+		};
+		6B08885612EDEC1E00D5290C /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PREBINDING = NO;
+				PRODUCT_NAME = "Beam It!";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+			};
+			name = Distribution;
+		};
+		6B08885712EDEC1E00D5290C /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = BeamIt_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = MY_CONTACT_ONLY;
+				INFOPLIST_FILE = "BeamIt-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = BeamIt;
+			};
+			name = Distribution;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				PRODUCT_NAME = "Beam It!";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PREBINDING = NO;
+				PRODUCT_NAME = "Beam It!";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "BeamItFree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+				6B08885712EDEC1E00D5290C /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "BeamIt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				6B08885612EDEC1E00D5290C /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

@@ -13,6 +13,8 @@
 @interface ViewController ()
 {
     MCPeerID *p_peerId;
+    BOOL isSelect;
+    
 }
 @property (nonatomic, strong) AppDelegate *appDelegate;
 @property (nonatomic, strong) NSMutableArray *arrConnectedDevices;
@@ -24,7 +26,7 @@
 {
     [super viewDidLoad];
     self.title = @"List Device";
-    
+    isSelect = NO;
     [self visibility];
     UserDefault  *user = [UserDefault new];
     NSMutableArray * array = [user resultObject:@"arrayDevice"];
@@ -52,7 +54,8 @@
                                                object:nil];
 
 }
-- ( IBAction)addDevice:(id)sender {
+- (IBAction)addDevice:(id)sender {
+    isSelect = YES;
     [self browse];
 }
 - (void)browse {
@@ -62,40 +65,42 @@
 
 }
 #pragma Notification Peer
--(void)peerDidChangeStateWithNotification:(NSNotification *)notification {
+
+- (void)peerDidChangeStateWithNotification:(NSNotification *)notification {
    p_peerId = [[notification userInfo] objectForKey:@"peerID"];
-    NSString *peerDisplayName = p_peerId.displayName;
+   // NSString *peerDisplayName = p_peerId.displayName;
     MCSessionState state = [[[notification userInfo] objectForKey:@"state"] intValue];
-    
     if (state != MCSessionStateConnecting) {
         if (state == MCSessionStateConnected) {
-            [_arrConnectedDevices addObject:peerDisplayName];
+            if (![_arrConnectedDevices containsObject:p_peerId]) {
+                [_arrConnectedDevices addObject:p_peerId];
+            }
         }
         else if (state == MCSessionStateNotConnected){
             if ([_arrConnectedDevices count] > 0) {
-                int indexOfPeer = [_arrConnectedDevices indexOfObject:peerDisplayName];
+                int indexOfPeer = [_arrConnectedDevices indexOfObject:p_peerId];
                 [_arrConnectedDevices removeObjectAtIndex:indexOfPeer];
             }
         }
         [ self.tbvDevice reloadData];
-        // save array device
         UserDefault  *user = [UserDefault new];
         [user objectWithKey:@"arrayDevice" value:_arrConnectedDevices];
         BOOL peersExist = ([[_appDelegate.mcManager.session connectedPeers] count] == 0);
+        if (peersExist ) {
+            UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Cannot find device" delegate:Nil cancelButtonTitle:Nil otherButtonTitles:@"OK", nil];
+            [alert show];
+        }
     }
-
 }
 #pragma mark - UITableView Delegate and Datasource method implementation
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
-
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [_arrConnectedDevices count];
 }
-
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellIdentifier"];
@@ -107,13 +112,19 @@
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    p_peerId = [_arrConnectedDevices objectAtIndex:indexPath.row];
+    if (isSelect == NO) {
+        _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        [[_appDelegate mcManager] setupPeerAndSessionWithDisplayName:[UIDevice currentDevice].name];
+        [_appDelegate.mcManager advertiseSelf:YES];
+    }
     [self performSegueWithIdentifier:@"chat" sender:Nil];
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
     if ([sender isEqualToString:@"chat"]) {
         ChatViewController *chat = (ChatViewController *)segue.destinationViewController;
         chat.peerID = p_peerId;
-        
     }
 }
 #pragma mark - MCBrowserViewControllerDelegate method implementation
@@ -121,7 +132,6 @@
 -(void)browserViewControllerDidFinish:(MCBrowserViewController *)browserViewController{
     [_appDelegate.mcManager.browser dismissViewControllerAnimated:YES completion:nil];
 }
-
 
 -(void)browserViewControllerWasCancelled:(MCBrowserViewController *)browserViewController{
     [_appDelegate.mcManager.browser dismissViewControllerAnimated:YES completion:nil];
