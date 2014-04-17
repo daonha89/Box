@@ -67,24 +67,25 @@
 #pragma Notification Peer
 
 - (void)peerDidChangeStateWithNotification:(NSNotification *)notification {
-   p_peerId = [[notification userInfo] objectForKey:@"peerID"];
-   // NSString *peerDisplayName = p_peerId.displayName;
+   MCPeerID * peerId = [[notification userInfo] objectForKey:@"peerID"];
+    p_peerId = peerId;
+    NSString *peerDisplayName = peerId.displayName;
     MCSessionState state = [[[notification userInfo] objectForKey:@"state"] intValue];
     if (state != MCSessionStateConnecting) {
         if (state == MCSessionStateConnected) {
-            if (![_arrConnectedDevices containsObject:p_peerId]) {
-                [_arrConnectedDevices addObject:p_peerId];
+            if (![_arrConnectedDevices containsObject:peerDisplayName]) {
+                [_arrConnectedDevices addObject:peerDisplayName];
             }
         }
         else if (state == MCSessionStateNotConnected){
             if ([_arrConnectedDevices count] > 0) {
-                int indexOfPeer = [_arrConnectedDevices indexOfObject:p_peerId];
+                int indexOfPeer = [_arrConnectedDevices indexOfObject:peerDisplayName];
                 [_arrConnectedDevices removeObjectAtIndex:indexOfPeer];
             }
         }
         [ self.tbvDevice reloadData];
         UserDefault  *user = [UserDefault new];
-        [user objectWithKey:@"arrayDevice" value:_arrConnectedDevices];
+        //[user objectWithKey:@"arrayDevice" value:_arrConnectedDevices];
         BOOL peersExist = ([[_appDelegate.mcManager.session connectedPeers] count] == 0);
         if (peersExist ) {
             UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Cannot find device" delegate:Nil cancelButtonTitle:Nil otherButtonTitles:@"OK", nil];
@@ -112,20 +113,19 @@
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    p_peerId = [_arrConnectedDevices objectAtIndex:indexPath.row];
-    if (isSelect == NO) {
-        _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-        [[_appDelegate mcManager] setupPeerAndSessionWithDisplayName:[UIDevice currentDevice].name];
-        [_appDelegate.mcManager advertiseSelf:YES];
-    }
+//    p_peerId = [_arrConnectedDevices objectAtIndex:indexPath.row];
+//    if (isSelect == NO) {
+//        _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+//        [[_appDelegate mcManager] setupPeerAndSessionWithDisplayName:[UIDevice currentDevice].name];
+//        [_appDelegate.mcManager advertiseSelf:YES];
+//    }
     [self performSegueWithIdentifier:@"chat" sender:Nil];
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    if ([sender isEqualToString:@"chat"]) {
-        ChatViewController *chat = (ChatViewController *)segue.destinationViewController;
-        chat.peerID = p_peerId;
-    }
+    ChatViewController *chat = (ChatViewController *)segue.destinationViewController;
+    NSLog(@"%@",p_peerId);
+    chat.peerID = p_peerId;
 }
 #pragma mark - MCBrowserViewControllerDelegate method implementation
 

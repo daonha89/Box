@@ -43,7 +43,7 @@
     _textField.delegate = self;
     bubbleData = [NSMutableArray new];
     bubbleTable.bubbleDataSource = self;
-    bubbleTable.snapInterval = 10;
+    bubbleTable.snapInterval = 120;
     bubbleTable.showAvatars = YES;
     bubbleTable.typingBubble = NSBubbleTypingTypeNobody;
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -64,7 +64,7 @@
         
     }
     [bubbleTable reloadData];
-    [bubbleTable scrollBubbleViewToBottomAnimated:YES];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(didReceiveDataWithNotification:)
                                                  name:@"MCDidReceiveDataNotification"
@@ -190,10 +190,15 @@
 //    NSString *peerDisplayName = peerID.displayName;
     NSData *receivedData = [[notification userInfo] objectForKey:@"data"];
     NSString *receivedText = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
-    NSBubbleData *sayBubble = [NSBubbleData dataWithText:receivedText date:[NSDate date] type:BubbleTypeMine];
-    [bubbleData addObject:sayBubble];
-    [bubbleTable scrollBubbleViewToBottomAnimated:YES];
-    [bubbleTable reloadData];
+    dispatch_async(dispatch_get_main_queue(), ^(void){
+        //Run UI Updates
+        NSBubbleData *sayBubble = [NSBubbleData dataWithText:receivedText date:[NSDate date] type:BubbleTypeSomeoneElse];
+        [bubbleData addObject:sayBubble];
+        [bubbleTable scrollBubbleViewToBottomAnimated:YES];
+        [bubbleTable reloadData];
+
+    });
+
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"dd/MM/yyyy HH:mm:ss"];
     ChatDetail * dt = [[ChatDetail alloc] init];
