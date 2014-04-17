@@ -51,11 +51,10 @@
     
     db = [[ChatDB alloc] init];
     [db createDataBase];
-    NSMutableArray * a = [db getListchat];
+    NSMutableArray * a = [db listChat:self.peerID];
     for (ChatDetail * chat in a) {
         NSBubbleData *sayBubble;
-        NSLog(@"peer1 [%@] - peer2 [%@]",chat.peerID,self.peerID);
-        if (chat.peerID != self.peerID) {
+        if ([chat.stt isEqualToString:@"0"]) {
             sayBubble = [NSBubbleData dataWithText:chat.content date:[formatter dateFromString:chat.date] type:BubbleTypeMine];
         }
         else {
@@ -66,7 +65,6 @@
     }
     [bubbleTable reloadData];
     [bubbleTable scrollBubbleViewToBottomAnimated:YES];
-    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(didReceiveDataWithNotification:)
                                                  name:@"MCDidReceiveDataNotification"
@@ -147,9 +145,6 @@
     NSData *dataToSend = [_textField.text dataUsingEncoding:NSUTF8StringEncoding];
     NSArray *allPeers = _appDelegate.mcManager.session.connectedPeers;
     NSError *error;
-    [_appDelegate.mcManager setUpStream];
-    [_appDelegate.mcManager.session startStreamWithName:@"bbb" toPeer:self.peerID error:Nil];
-    [_appDelegate.mcManager.outputStream write:[dataToSend bytes] maxLength:[dataToSend length]];
     [_appDelegate.mcManager.session sendData:dataToSend
                                      toPeers:allPeers
                                     withMode:MCSessionSendDataReliable
@@ -165,11 +160,12 @@
     [bubbleTable reloadData];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"dd/MM/yyyy HH:mm:ss"];
-    MCPeerID * myId =  _appDelegate.mcManager.session.myPeerID;
+    MCPeerID * myId =  self.peerID;
     ChatDetail * dt = [[ChatDetail alloc] init];
     dt.peerID = myId;
     dt.content = _textField.text;
     dt.date = [formatter stringFromDate:[NSDate date]];
+    dt.stt = @"0";
     BOOL  iSave = [db insertOrUpdate:dt];
     if (iSave == NO) {
         NSLog(@"[No]");
@@ -199,11 +195,10 @@
     [bubbleTable reloadData];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"dd/MM/yyyy HH:mm:ss"];
-    MCPeerID * myId = peerID;
     ChatDetail * dt = [[ChatDetail alloc] init];
-    dt.peerID = myId;
     dt.content = receivedText;
     dt.date = [formatter stringFromDate:[NSDate date]];
+    dt.stt = @"1";
     BOOL  iSave = [db insertOrUpdate:dt];
     if (iSave == NO) {
         NSLog(@"[No]");

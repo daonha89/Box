@@ -17,4 +17,5 @@
 - (void) createDataBase;
 - (BOOL)insertOrUpdate:(ChatDetail *)dicInfo;
 - (NSMutableArray* )getListchat;
+- (NSMutableArray * )listChat:(MCPeerID*)peerId;
 @end

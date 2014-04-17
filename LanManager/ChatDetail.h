@@ -12,4 +12,5 @@
 @property (nonatomic,strong) NSString * content;
 @property (nonatomic,weak) MCPeerID *peerID;
 @property (nonatomic,weak) NSString * date;
+@property (nonatomic,weak) NSString * stt;
 @end
