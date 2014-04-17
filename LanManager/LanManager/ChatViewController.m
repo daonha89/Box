@@ -173,12 +173,13 @@
     else {
         NSLog(@"[yes]");
     }
-
 }
 
 #pragma UitextField Delegate 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
     [_textField resignFirstResponder];
+    
     return YES;
 }
 #pragma Notification
@@ -199,6 +200,7 @@
     dt.content = receivedText;
     dt.date = [formatter stringFromDate:[NSDate date]];
     dt.stt = @"1";
+    dt.peerID = peerID;
     BOOL  iSave = [db insertOrUpdate:dt];
     if (iSave == NO) {
         NSLog(@"[No]");
